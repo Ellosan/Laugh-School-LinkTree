@@ -31,8 +31,9 @@ body {
   color: var(--text);
   font-family: var(--body);
   background:
-    linear-gradient(135deg, rgba(255, 214, 10, 0.08), transparent 28%),
-    linear-gradient(215deg, rgba(101, 212, 255, 0.08), transparent 36%),
+    radial-gradient(circle at 50% 0%, rgba(255, 214, 10, 0.1), transparent 28%),
+    linear-gradient(135deg, rgba(255, 214, 10, 0.07), transparent 30%),
+    linear-gradient(215deg, rgba(101, 212, 255, 0.07), transparent 38%),
     var(--bg);
 }
 
@@ -51,13 +52,15 @@ a {
 .link-card {
   position: relative;
   width: 100%;
-  max-width: 430px;
+  max-width: 452px;
   overflow: hidden;
-  border: 1px solid rgba(255, 214, 10, 0.22);
-  border-radius: 24px;
-  background: linear-gradient(180deg, rgba(21, 45, 35, 0.96), rgba(10, 19, 16, 0.97));
+  border: 1px solid rgba(255, 214, 10, 0.72);
+  border-radius: 18px;
+  background:
+    linear-gradient(180deg, rgba(21, 47, 36, 0.96), rgba(7, 17, 14, 0.985)),
+    #10251d;
   box-shadow: var(--shadow);
-  padding: 24px 18px 18px;
+  padding: 0 18px 18px;
   isolation: isolate;
 }
 
@@ -85,22 +88,59 @@ a {
 
 .link-card::before {
   content: "LOL";
-  top: 18px;
-  right: -18px;
+  top: 72px;
+  right: -14px;
   transform: rotate(13deg);
 }
 
 .link-card::after {
   content: "A+";
-  bottom: 72px;
-  left: -8px;
+  top: 128px;
+  left: 10px;
   transform: rotate(-10deg);
+}
+
+.top-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 -18px 20px;
+  border-bottom: 1px solid rgba(255, 214, 10, 0.56);
+  background: rgba(7, 17, 14, 0.44);
+  color: var(--text);
+  font-family: var(--heading);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  min-height: 38px;
+  padding: 0 16px;
+  text-transform: uppercase;
+}
+
+.top-strip span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  white-space: nowrap;
+}
+
+.mini-icon {
+  color: var(--gold);
+  font-size: 0.72rem;
+}
+
+.viber-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #44d06d;
+  box-shadow: 0 0 0 4px rgba(68, 208, 109, 0.14);
 }
 
 .brand-header {
   display: grid;
-  grid-template-columns: 82px 1fr;
-  gap: 14px;
+  grid-template-columns: 86px 1fr;
+  gap: 16px;
   align-items: center;
 }
 
@@ -108,12 +148,13 @@ a {
   display: grid;
   width: 82px;
   height: 82px;
-  place-items: center;
   overflow: hidden;
-  border: 2px solid rgba(255, 214, 10, 0.8);
+  border: 2px solid rgba(255, 214, 10, 0.9);
   border-radius: 50%;
   background: #0b0b0b;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.32);
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.32),
+    0 0 0 5px rgba(255, 214, 10, 0.08);
 }
 
 .crest img {
@@ -126,7 +167,7 @@ a {
   margin: 0;
   color: var(--gold);
   font-family: var(--heading);
-  font-size: clamp(1.45rem, 8vw, 2.18rem);
+  font-size: clamp(1.55rem, 8.4vw, 2.35rem);
   font-weight: 900;
   line-height: 0.96;
   letter-spacing: 0;
@@ -145,7 +186,7 @@ footer p {
 }
 
 .brand-copy p {
-  margin-top: 8px;
+  margin-top: 9px;
   color: var(--text);
   font-size: 0.82rem;
   font-weight: 700;
@@ -154,28 +195,37 @@ footer p {
 
 .motto {
   margin-top: 18px;
-  color: var(--muted);
-  font-size: 0.9rem;
-  font-style: italic;
-  line-height: 1.55;
+  border: 1px solid rgba(255, 214, 10, 0.34);
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(246, 232, 199, 0.96), rgba(230, 213, 178, 0.96));
+  box-shadow: inset 0 0 0 1px rgba(18, 28, 23, 0.16);
+  color: #17201b;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.42;
+  padding: 10px 12px;
   text-align: center;
 }
 
 .link-list {
   display: grid;
-  gap: 10px;
-  margin-top: 20px;
+  gap: 11px;
+  margin-top: 18px;
 }
 
 .link-row {
   display: grid;
-  grid-template-columns: 42px 1fr 22px;
+  grid-template-columns: 50px 1fr auto 22px;
   gap: 12px;
   align-items: center;
-  min-height: 68px;
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  background: rgba(244, 243, 232, 0.064);
+  min-height: 74px;
+  border: 1px solid rgba(255, 214, 10, 0.42);
+  border-radius: 12px;
+  background:
+    linear-gradient(90deg, rgba(244, 243, 232, 0.075), rgba(244, 243, 232, 0.03)),
+    rgba(7, 20, 16, 0.38);
   padding: 10px 12px;
   text-decoration: none;
   transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
@@ -183,31 +233,35 @@ footer p {
 
 .link-row:hover,
 .link-row:focus-visible {
-  border-color: rgba(255, 214, 10, 0.68);
-  background: rgba(255, 214, 10, 0.11);
+  border-color: rgba(255, 214, 10, 0.9);
+  background:
+    linear-gradient(90deg, rgba(255, 214, 10, 0.13), rgba(244, 243, 232, 0.04)),
+    rgba(7, 20, 16, 0.58);
   transform: translateY(-2px);
   outline: none;
 }
 
 .link-row.primary {
-  border-color: rgba(255, 214, 10, 0.52);
-  background: linear-gradient(135deg, rgba(255, 214, 10, 0.18), rgba(47, 157, 103, 0.16));
+  border-color: rgba(255, 214, 10, 0.82);
+  background: linear-gradient(135deg, rgba(255, 214, 10, 0.18), rgba(47, 157, 103, 0.14));
 }
 
 .link-row.viber {
-  border-color: rgba(101, 212, 255, 0.34);
+  border-color: rgba(101, 212, 255, 0.46);
 }
 
 .row-icon {
   display: grid;
-  width: 42px;
-  height: 42px;
+  width: 50px;
+  height: 50px;
   place-items: center;
-  border-radius: 12px;
-  background: #f4f3e8;
+  border: 1px solid rgba(23, 32, 27, 0.18);
+  border-radius: 10px;
+  background: linear-gradient(180deg, #fff8e7, #e9ddc2);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
   color: #10251d;
   font-family: var(--heading);
-  font-size: 1rem;
+  font-size: 1.03rem;
   font-weight: 900;
 }
 
@@ -218,15 +272,39 @@ footer p {
 
 .link-row strong {
   color: var(--text);
-  font-size: 0.96rem;
+  font-size: 1.02rem;
   line-height: 1.25;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.28);
 }
 
 .link-row small {
   margin-top: 3px;
   color: var(--muted);
-  font-size: 0.74rem;
+  font-size: 0.77rem;
   line-height: 1.32;
+}
+
+.link-row em {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  background: rgba(111, 67, 157, 0.72);
+  color: #fff;
+  font-size: 0.68rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1;
+  padding: 7px 9px;
+}
+
+.link-row em::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: #44d06d;
 }
 
 .link-row svg {
@@ -240,9 +318,9 @@ footer p {
 }
 
 footer {
-  margin-top: 18px;
+  margin-top: 14px;
   border-top: 1px solid rgba(244, 243, 232, 0.12);
-  padding-top: 14px;
+  padding-top: 13px;
   text-align: center;
 }
 
@@ -252,6 +330,48 @@ footer p {
   line-height: 1.55;
 }
 
+.seal-row {
+  display: grid;
+  grid-template-columns: 54px 1fr 54px;
+  gap: 12px;
+  align-items: center;
+  margin: 16px -18px 0;
+  border-top: 1px solid rgba(255, 214, 10, 0.5);
+  border-bottom: 1px solid rgba(255, 214, 10, 0.28);
+  background: rgba(0, 0, 0, 0.18);
+  padding: 12px 18px;
+  text-align: center;
+}
+
+.seal-row p {
+  margin: 0;
+  color: var(--gold);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.92rem;
+  line-height: 1.32;
+}
+
+.seal-mark,
+.seal-year {
+  display: grid;
+  width: 54px;
+  height: 54px;
+  place-items: center;
+  border: 1px solid rgba(244, 243, 232, 0.4);
+  border-radius: 50%;
+  color: var(--text);
+  font-family: var(--heading);
+  font-weight: 900;
+}
+
+.seal-mark {
+  font-size: 1.35rem;
+}
+
+.seal-year {
+  font-size: 0.62rem;
+}
+
 @media (max-width: 360px) {
   .page-shell {
     padding: 12px 8px;
@@ -259,11 +379,23 @@ footer p {
 
   .link-card {
     border-radius: 18px;
-    padding: 18px 12px 14px;
+    padding: 0 12px 14px;
+  }
+
+  .top-strip,
+  .seal-row {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+
+  .top-strip {
+    font-size: 0.54rem;
+    padding: 0 10px;
   }
 
   .brand-header {
     grid-template-columns: 68px 1fr;
+    gap: 12px;
   }
 
   .crest {
@@ -272,14 +404,18 @@ footer p {
   }
 
   .link-row {
-    grid-template-columns: 36px 1fr 18px;
+    grid-template-columns: 38px 1fr auto 18px;
     gap: 10px;
     padding: 9px 10px;
   }
 
   .row-icon {
-    width: 36px;
-    height: 36px;
+    width: 38px;
+    height: 38px;
+  }
+
+  .link-row em {
+    display: none;
   }
 }
 
