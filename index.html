@@ -20,8 +20,12 @@
       <section class="link-card" aria-labelledby="page-title">
         <div class="chalk-grid" aria-hidden="true"></div>
         <div class="top-strip" aria-label="School status">
-          <span><span class="mini-icon" aria-hidden="true">▣</span> Open</span>
-          <span><span class="viber-dot" aria-hidden="true"></span> Live</span>
+          <span><span class="mini-icon" aria-hidden="true">▣</span> <span data-i18n="statusOpen">Open</span></span>
+          <span><span class="viber-dot" aria-hidden="true"></span> <span data-i18n="statusLive">Live</span></span>
+          <div class="language-switch" aria-label="Language">
+            <button class="active" type="button" data-lang="el">EL</button>
+            <button type="button" data-lang="en">EN</button>
+          </div>
         </div>
 
         <header class="brand-header">
@@ -30,81 +34,88 @@
           </a>
           <div class="brand-copy">
             <h1 id="page-title">LAUGH SCHOOL<span>™</span></h1>
-            <p>Ανώτατη Σχολή Memeολόγων</p>
+            <p data-i18n="subtitle">Ανώτατη Σχολή Memeολόγων</p>
           </div>
         </header>
 
         <p class="motto">"In Memes We Trust, In Normies We Bust"</p>
 
         <nav class="link-list" aria-label="Κύριοι σύνδεσμοι">
-          <a class="link-row primary" href="https://laugh-school.web.app/">
-            <span class="row-icon" aria-hidden="true">⌂</span>
-            <span>
-              <strong>Επίσημη Ιστοσελίδα</strong>
-              <small>laugh-school.web.app</small>
-            </span>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l7 7-7 7"/></svg>
-          </a>
-
           <a class="link-row viber" href="http://invite.viber.com/?g2=AQBeBJ%2FYhyWtNVF2hNrpwoNh4jfIY24UUwSVyfxpVy2DTMB2FSdKjh0he78YkAx4">
             <span class="row-icon" aria-hidden="true">✆</span>
             <span>
-              <strong>Κοινότητα Viber</strong>
-              <small>Μπες στην ομάδα των Memeολόγων</small>
+              <strong data-i18n="viberTitle">Κοινότητα Viber</strong>
+              <small data-i18n="viberDesc">Μπες στην ομάδα των Memeολόγων</small>
             </span>
-            <em aria-label="Live community">Live</em>
+            <em aria-label="Live community" data-i18n="liveBadge">Live</em>
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l7 7-7 7"/></svg>
           </a>
 
-          <a class="link-row" href="https://laugh-school.web.app/#board">
-            <span class="row-icon" aria-hidden="true">!</span>
-            <span>
-              <strong>Ανακοινώσεις</strong>
-              <small>Πίνακας σχολικών meme updates</small>
-            </span>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l7 7-7 7"/></svg>
-          </a>
+          <details class="options-dropdown">
+            <summary>
+              <span class="row-icon" aria-hidden="true">▦</span>
+              <span>
+                <strong data-i18n="dropdownTitle">Όλες οι επιλογές</strong>
+                <small data-i18n="dropdownDesc">Ιστοσελίδα, ανακοινώσεις, μαθήματα και πτυχίο</small>
+              </span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
 
-          <a class="link-row" href="https://laugh-school.web.app/#admins">
-            <span class="row-icon" aria-hidden="true">★</span>
-            <span>
-              <strong>Καθηγητές</strong>
-              <small>Η ακαδημαϊκή ομάδα του σχολείου</small>
-            </span>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l7 7-7 7"/></svg>
-          </a>
+            <div class="dropdown-panel">
+              <a class="option-row primary" href="https://laugh-school.web.app/">
+                <span class="option-icon" aria-hidden="true">⌂</span>
+                <span>
+                  <strong data-i18n="siteTitle">Επίσημη Ιστοσελίδα</strong>
+                  <small>laugh-school.web.app</small>
+                </span>
+              </a>
 
-          <a class="link-row" href="https://laugh-school.web.app/#curriculum">
-            <span class="row-icon" aria-hidden="true">▦</span>
-            <span>
-              <strong>Πρόγραμμα Σπουδών</strong>
-              <small>Μαθήματα memeology και quiz</small>
-            </span>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l7 7-7 7"/></svg>
-          </a>
+              <a class="option-row" href="https://laugh-school.web.app/#board">
+                <span class="option-icon" aria-hidden="true">!</span>
+                <span>
+                  <strong data-i18n="boardTitle">Ανακοινώσεις</strong>
+                  <small data-i18n="boardDesc">Πίνακας σχολικών meme updates</small>
+                </span>
+              </a>
 
-          <a class="link-row" href="https://laugh-school.web.app/#anekdota">
-            <span class="row-icon" aria-hidden="true">?</span>
-            <span>
-              <strong>Αστεία &amp; Ανέκδοτα</strong>
-              <small>Το επίσημο εργαστήριο γέλιου</small>
-            </span>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l7 7-7 7"/></svg>
-          </a>
+              <a class="option-row" href="https://laugh-school.web.app/#admins">
+                <span class="option-icon" aria-hidden="true">★</span>
+                <span>
+                  <strong data-i18n="teachersTitle">Καθηγητές</strong>
+                  <small data-i18n="teachersDesc">Η ακαδημαϊκή ομάδα του σχολείου</small>
+                </span>
+              </a>
 
-          <a class="link-row" href="https://laugh-school.web.app/classes.html">
-            <span class="row-icon" aria-hidden="true">§</span>
-            <span>
-              <strong>Τάξεις</strong>
-              <small>Πιστοποιητικό Γέλιου</small>
-            </span>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l7 7-7 7"/></svg>
-          </a>
+              <a class="option-row" href="https://laugh-school.web.app/#curriculum">
+                <span class="option-icon" aria-hidden="true">▦</span>
+                <span>
+                  <strong data-i18n="curriculumTitle">Πρόγραμμα Σπουδών</strong>
+                  <small data-i18n="curriculumDesc">Μαθήματα memeology και quiz</small>
+                </span>
+              </a>
+
+              <a class="option-row" href="https://laugh-school.web.app/#anekdota">
+                <span class="option-icon" aria-hidden="true">?</span>
+                <span>
+                  <strong data-i18n="jokesTitle">Αστεία &amp; Ανέκδοτα</strong>
+                  <small data-i18n="jokesDesc">Το επίσημο εργαστήριο γέλιου</small>
+                </span>
+              </a>
+
+              <a class="option-row" href="https://laugh-school.web.app/classes.html">
+                <span class="option-icon" aria-hidden="true">§</span>
+                <span>
+                  <strong data-i18n="classesTitle">Τάξεις</strong>
+                  <small data-i18n="classesDesc">Πιστοποιητικό Γέλιου</small>
+                </span>
+              </a>
+            </div>
+          </details>
         </nav>
 
         <aside class="seal-row" aria-label="Memeology motto">
           <span class="seal-mark" aria-hidden="true">U</span>
-          <p>In Knowledge of Memes,<br>We Achieve Greatness.</p>
+          <p data-i18n="sealText">In Knowledge of Memes,<br>We Achieve Greatness.</p>
           <span class="seal-year" aria-hidden="true">2024</span>
         </aside>
 
@@ -113,5 +124,6 @@
         </footer>
       </section>
     </main>
+    <script src="./script.js"></script>
   </body>
 </html>

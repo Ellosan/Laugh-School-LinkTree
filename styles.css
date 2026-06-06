@@ -125,6 +125,36 @@ a {
   white-space: nowrap;
 }
 
+.language-switch {
+  display: inline-flex;
+  gap: 4px;
+  border: 1px solid rgba(255, 214, 10, 0.26);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.22);
+  padding: 3px;
+}
+
+.language-switch button {
+  min-width: 32px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font: 800 0.62rem/1 var(--heading);
+  padding: 7px 8px;
+}
+
+.language-switch button.active {
+  background: var(--gold);
+  color: #111c17;
+}
+
+.language-switch button:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
 .mini-icon {
   color: var(--gold);
   font-size: 0.72rem;
@@ -318,6 +348,119 @@ footer p {
   stroke-width: 2.4;
 }
 
+.options-dropdown {
+  border: 1px solid rgba(255, 214, 10, 0.42);
+  border-radius: 12px;
+  background:
+    linear-gradient(90deg, rgba(244, 243, 232, 0.06), rgba(244, 243, 232, 0.025)),
+    rgba(7, 20, 16, 0.38);
+  overflow: hidden;
+}
+
+.options-dropdown[open] {
+  border-color: rgba(255, 214, 10, 0.86);
+}
+
+.options-dropdown summary {
+  display: grid;
+  grid-template-columns: 50px 1fr 22px;
+  gap: 12px;
+  align-items: center;
+  min-height: 74px;
+  cursor: pointer;
+  list-style: none;
+  padding: 10px 12px;
+}
+
+.options-dropdown summary::-webkit-details-marker {
+  display: none;
+}
+
+.options-dropdown summary:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: -4px;
+}
+
+.options-dropdown summary strong,
+.option-row strong {
+  display: block;
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.24;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.28);
+}
+
+.options-dropdown summary small,
+.option-row small {
+  display: block;
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 0.74rem;
+  line-height: 1.32;
+}
+
+.options-dropdown summary svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: var(--gold);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.4;
+  transition: transform 180ms ease;
+}
+
+.options-dropdown[open] summary svg {
+  transform: rotate(180deg);
+}
+
+.dropdown-panel {
+  display: grid;
+  gap: 6px;
+  border-top: 1px solid rgba(255, 214, 10, 0.28);
+  background: rgba(0, 0, 0, 0.14);
+  padding: 8px;
+}
+
+.option-row {
+  display: grid;
+  grid-template-columns: 38px 1fr;
+  gap: 10px;
+  align-items: center;
+  min-height: 56px;
+  border: 1px solid rgba(244, 243, 232, 0.1);
+  border-radius: 10px;
+  background: rgba(244, 243, 232, 0.035);
+  padding: 8px 10px;
+  text-decoration: none;
+  transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
+}
+
+.option-row:hover,
+.option-row:focus-visible {
+  border-color: rgba(255, 214, 10, 0.65);
+  background: rgba(255, 214, 10, 0.09);
+  outline: none;
+  transform: translateX(2px);
+}
+
+.option-row.primary {
+  border-color: rgba(255, 214, 10, 0.38);
+}
+
+.option-icon {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border-radius: 9px;
+  background: rgba(246, 232, 199, 0.92);
+  color: #10251d;
+  font-family: var(--heading);
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
 footer {
   margin-top: 14px;
   border-top: 1px solid rgba(244, 243, 232, 0.12);
@@ -392,6 +535,12 @@ footer p {
   .top-strip {
     font-size: 0.58rem;
     padding: 0 10px;
+    gap: 10px;
+  }
+
+  .language-switch button {
+    min-width: 28px;
+    padding: 6px 7px;
   }
 
   .brand-header {
@@ -418,6 +567,12 @@ footer p {
   .link-row em {
     display: none;
   }
+
+  .options-dropdown summary {
+    grid-template-columns: 38px 1fr 18px;
+    gap: 10px;
+    padding: 9px 10px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -434,6 +589,7 @@ footer p {
 
   .top-strip {
     min-height: 38px;
+    gap: 12px;
   }
 
   .brand-header {
@@ -487,6 +643,30 @@ footer p {
   .link-row em {
     font-size: 0.63rem;
     padding: 6px 8px;
+  }
+
+  .options-dropdown summary {
+    grid-template-columns: 46px 1fr 18px;
+    min-height: 64px;
+    padding: 8px 10px;
+  }
+
+  .options-dropdown summary strong {
+    font-size: 0.94rem;
+  }
+
+  .options-dropdown summary small,
+  .option-row small {
+    font-size: 0.7rem;
+  }
+
+  .dropdown-panel {
+    gap: 5px;
+    padding: 7px;
+  }
+
+  .option-row {
+    min-height: 52px;
   }
 
   .seal-row {
