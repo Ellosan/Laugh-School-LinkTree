@@ -1,89 +1,129 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="el">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
-
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/12.14.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/12.14.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/12.14.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/12.14.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/12.14.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/12.14.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/12.14.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/12.14.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/12.14.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/12.14.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
+    <title>LAUGH SCHOOL™ Links</title>
+    <meta name="description" content="Όλοι οι επίσημοι σύνδεσμοι του LAUGH SCHOOL™ σε μία σελίδα.">
+    <meta name="theme-color" content="#0f1814">
+    <meta property="og:title" content="LAUGH SCHOOL™ Links">
+    <meta property="og:description" content="Επίσημη ιστοσελίδα, Viber κοινότητα, ανακοινώσεις, μαθήματα, αστεία και πτυχίο.">
+    <meta property="og:image" content="https://laugh-school.web.app/Laugh%20School%20Logo.jpg">
+    <link rel="icon" href="https://laugh-school.web.app/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Noto+Sans:ital,wght@0,400;0,600;0,700;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+    <main class="page-shell">
+      <section class="link-card" aria-labelledby="page-title">
+        <div class="chalk-grid" aria-hidden="true"></div>
+        <div class="top-strip" aria-label="School status">
+          <span><span class="mini-icon" aria-hidden="true">▣</span> <span data-i18n="statusOpen">Open</span></span>
+          <span><span class="viber-dot" aria-hidden="true"></span> <span data-i18n="statusLive">Live</span></span>
+          <div class="language-switch" aria-label="Language">
+            <button class="active" type="button" data-lang="el">EL</button>
+            <button type="button" data-lang="en">EN</button>
+          </div>
+        </div>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        <header class="brand-header">
+          <a class="crest" href="https://laugh-school.web.app/" aria-label="Άνοιγμα επίσημης ιστοσελίδας">
+            <img src="https://laugh-school.web.app/Laugh%20School%20Logo.jpg" alt="LAUGH SCHOOL logo">
+          </a>
+          <div class="brand-copy">
+            <h1 id="page-title">LAUGH SCHOOL<span>™</span></h1>
+            <p data-i18n="subtitle">Ανώτατη Σχολή Memeολόγων</p>
+          </div>
+        </header>
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
+        <p class="motto">"In Memes We Trust, In Normies We Bust"</p>
+
+        <nav class="link-list" aria-label="Κύριοι σύνδεσμοι">
+          <a class="link-row viber" href="http://invite.viber.com/?g2=AQBeBJ%2FYhyWtNVF2hNrpwoNh4jfIY24UUwSVyfxpVy2DTMB2FSdKjh0he78YkAx4">
+            <span class="row-icon" aria-hidden="true">✆</span>
+            <span>
+              <strong data-i18n="viberTitle">Κοινότητα Viber</strong>
+              <small data-i18n="viberDesc">Μπες στην ομάδα των Memeολόγων</small>
+            </span>
+            <em aria-label="Live community" data-i18n="liveBadge">Live</em>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l7 7-7 7"/></svg>
+          </a>
+
+          <details class="options-dropdown">
+            <summary>
+              <span class="row-icon" aria-hidden="true">▦</span>
+              <span>
+                <strong data-i18n="dropdownTitle">Όλες οι επιλογές</strong>
+                <small data-i18n="dropdownDesc">Ιστοσελίδα, ανακοινώσεις, μαθήματα και πτυχίο</small>
+              </span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+
+            <div class="dropdown-panel">
+              <a class="option-row primary" href="https://laugh-school.web.app/">
+                <span class="option-icon" aria-hidden="true">⌂</span>
+                <span>
+                  <strong data-i18n="siteTitle">Επίσημη Ιστοσελίδα</strong>
+                  <small>laugh-school.web.app</small>
+                </span>
+              </a>
+
+              <a class="option-row" href="https://laugh-school.web.app/#board">
+                <span class="option-icon" aria-hidden="true">!</span>
+                <span>
+                  <strong data-i18n="boardTitle">Ανακοινώσεις</strong>
+                  <small data-i18n="boardDesc">Πίνακας σχολικών meme updates</small>
+                </span>
+              </a>
+
+              <a class="option-row" href="https://laugh-school.web.app/#admins">
+                <span class="option-icon" aria-hidden="true">★</span>
+                <span>
+                  <strong data-i18n="teachersTitle">Καθηγητές</strong>
+                  <small data-i18n="teachersDesc">Η ακαδημαϊκή ομάδα του σχολείου</small>
+                </span>
+              </a>
+
+              <a class="option-row" href="https://laugh-school.web.app/#curriculum">
+                <span class="option-icon" aria-hidden="true">▦</span>
+                <span>
+                  <strong data-i18n="curriculumTitle">Πρόγραμμα Σπουδών</strong>
+                  <small data-i18n="curriculumDesc">Μαθήματα memeology και quiz</small>
+                </span>
+              </a>
+
+              <a class="option-row" href="https://laugh-school.web.app/#anekdota">
+                <span class="option-icon" aria-hidden="true">?</span>
+                <span>
+                  <strong data-i18n="jokesTitle">Αστεία &amp; Ανέκδοτα</strong>
+                  <small data-i18n="jokesDesc">Το επίσημο εργαστήριο γέλιου</small>
+                </span>
+              </a>
+
+              <a class="option-row" href="https://laugh-school.web.app/classes.html">
+                <span class="option-icon" aria-hidden="true">§</span>
+                <span>
+                  <strong data-i18n="classesTitle">Τάξεις</strong>
+                  <small data-i18n="classesDesc">Πιστοποιητικό Γέλιου</small>
+                </span>
+              </a>
+            </div>
+          </details>
+        </nav>
+
+        <aside class="seal-row" aria-label="Memeology motto">
+          <span class="seal-mark" aria-hidden="true">U</span>
+          <p data-i18n="sealText">In Knowledge of Memes,<br>We Achieve Greatness.</p>
+          <span class="seal-year" aria-hidden="true">2024</span>
+        </aside>
+
+        <footer>
+          <p>Created by La.Sc.De. | Powered by United-Memers</p>
+        </footer>
+      </section>
+    </main>
+    <script src="./script.js"></script>
   </body>
 </html>
