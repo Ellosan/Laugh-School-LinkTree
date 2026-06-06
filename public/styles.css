@@ -155,9 +155,85 @@ a {
   outline-offset: 2px;
 }
 
+.top-socials {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.social-btn {
+  display: inline-grid;
+  min-width: 30px;
+  height: 30px;
+  place-items: center;
+  border: 1px solid rgba(255, 214, 10, 0.26);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.22);
+  color: var(--text);
+  font: 900 0.58rem/1 var(--heading);
+  text-decoration: none;
+  transition: background 180ms ease, border-color 180ms ease, color 180ms ease;
+}
+
+.social-btn svg {
+  width: 17px;
+  height: 17px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.social-btn.youtube svg path:first-child {
+  fill: currentColor;
+  stroke: currentColor;
+}
+
+.social-btn.youtube svg path:last-child {
+  fill: #111c17;
+  stroke: #111c17;
+}
+
+.social-btn:hover,
+.social-btn:focus-visible {
+  border-color: rgba(255, 214, 10, 0.72);
+  background: rgba(255, 214, 10, 0.16);
+  outline: none;
+}
+
+.social-btn.whatsapp {
+  color: #67e48f;
+}
+
+.social-btn.instagram {
+  color: #ff7ab6;
+}
+
+.social-btn.youtube {
+  color: #ff5b5b;
+}
+
 .mini-icon {
   color: var(--gold);
   font-size: 0.72rem;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
 }
 
 .viber-dot {
@@ -279,6 +355,13 @@ footer p {
 
 .link-row.viber {
   border-color: rgba(101, 212, 255, 0.46);
+}
+
+.link-row.channel {
+  border-color: rgba(255, 214, 10, 0.5);
+  background:
+    linear-gradient(90deg, rgba(255, 214, 10, 0.09), rgba(101, 212, 255, 0.045)),
+    rgba(7, 20, 16, 0.42);
 }
 
 .row-icon {
@@ -448,6 +531,10 @@ footer p {
   border-color: rgba(255, 214, 10, 0.38);
 }
 
+.option-row.social {
+  border-color: rgba(101, 212, 255, 0.18);
+}
+
 .option-icon {
   display: grid;
   width: 38px;
@@ -541,6 +628,12 @@ footer p {
   .language-switch button {
     min-width: 28px;
     padding: 6px 7px;
+  }
+
+  .social-btn {
+    min-width: 27px;
+    height: 27px;
+    font-size: 0.52rem;
   }
 
   .brand-header {
